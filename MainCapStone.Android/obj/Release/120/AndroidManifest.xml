@@ -16,7 +16,7 @@
   <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
   <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
   <application android:label="MainCapStone.Android" android:theme="@style/MainTheme" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:extractNativeLibs="true">
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyC1Jei81RylYVGUdMO06cnIKFtCh93j9NE" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="MainCapStone" android:theme="@style/MainTheme" android:name="crc64e5f44f13beb4fc6e.MainActivity" android:exported="true">
       <intent-filter>
