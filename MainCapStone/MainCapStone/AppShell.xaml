@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MainCapStone.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MainCapStone.Views"
+    Title="MainCapStone">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+        
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Dark={StaticResource darkBackgroundColor}, Light={StaticResource lightBackgroundColor}}" />
+                <Setter Property="Shell.ForegroundColor" Value="#a3a2a2" />
+                <Setter Property="Shell.TitleColor" Value="#a3a2a2" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Dark={StaticResource darkBackgroundColor}, Light={StaticResource lightBackgroundColor}}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Dark={StaticResource lightTextColor}, Light=#7d6e75}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent
+            Title="Filters"
+            ContentTemplate="{DataTemplate local:SettingsPage}"
+            Icon="filter.png"
+            Route="SettingsPage" />
+        <ShellContent
+            Title="Find"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="find.png"
+            Route="MainPage" />
+    </TabBar>
+
+</Shell>

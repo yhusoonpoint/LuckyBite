@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="MainCapStone.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="darkBackgroundColor">#0d0c0c</Color>
+            <Color x:Key="lightBackgroundColor">#f0f0f0</Color>
+            <Color x:Key="darkContainerColor">#1c1c1c</Color>
+            <Color x:Key="lightContainerColor">#d1d1d1</Color>
+            <Color x:Key="darkTextColor">#1c1c1c</Color>
+            <Color x:Key="lightTextColor">#a3a2a2</Color>
+
+            <Style x:Key="frames" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource darkContainerColor}, Light={StaticResource lightContainerColor}}" />
+                <Setter Property="Margin" Value="20,5" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            <Style x:Key="grids" TargetType="Grid">
+                <Setter Property="Grid.ColumnDefinitions" Value="*" />
+                <Setter Property="Grid.ColumnDefinitions" Value="Auto" />
+            </Style>
+            <Style x:Key="starsImage" TargetType="Image">
+                <Setter Property="Source" Value="no_star.png" />
+                <Setter Property="WidthRequest" Value="20" />
+                <Setter Property="HeightRequest" Value="20" />
+            </Style>
+            <Style x:Key="starsButton" TargetType="ImageButton">
+                <Setter Property="Source" Value="no_star.png" />
+                <Setter Property="WidthRequest" Value="20" />
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+            <Style x:Key="linkImageButton" TargetType="ImageButton">
+                <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource darkContainerColor}, Light={StaticResource lightContainerColor}}" />
+                <Setter Property="Margin" Value="20,0" />
+            </Style>
+            <Style x:Key="basicButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource darkContainerColor}, Light={StaticResource lightContainerColor}}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                <Setter Property="CornerRadius" Value="30" />
+                <Setter Property="Margin" Value="20,0" />
+            </Style>
+            <Style x:Key="linkButton" TargetType="Button">
+                <Setter Property="Margin" Value="0,-20" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+            <Style x:Key="radioButtons" TargetType="RadioButton">
+                <Setter Property="FontSize" Value="Body" />
+                <Setter Property="Margin" Value="0,15,0,0" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

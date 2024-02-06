@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MainCapStone.Views.RestaurantDetailsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MainCapStone.Helpers"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:viewmodels="clr-namespace:MainCapStone.ViewModels"
+    xmlns:yelpapi="clr-namespace:MainCapStone.yelpAPI"
+    Title="{Binding name}"
+    x:DataType="yelpapi:Business"
+    BackgroundColor="{AppThemeBinding Dark={StaticResource darkBackgroundColor},
+                                      Light={StaticResource lightBackgroundColor}}"
+    Shell.TabBarIsVisible="False">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="favourite"
+            Clicked="Add_Clicked"
+            IconImageSource="empty_star.png" />
+    </ContentPage.ToolbarItems>
+    <Shell.TitleView>
+        <Label Text="Result" />
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame
+                BackgroundColor="Transparent"
+                CornerRadius="800"
+                Style="{StaticResource frames}">
+                <Image
+                    x:Name="restaurantImage"
+                    Aspect="Fill"
+                    HeightRequest="200" />
+            </Frame>
+
+            <Frame Style="{StaticResource frames}">
+                <StackLayout>
+                    <Label
+                        FontSize="Medium"
+                        HorizontalOptions="StartAndExpand"
+                        Text="{Binding name}"
+                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor},
+                                                    Light={StaticResource darkTextColor}}"
+                        VerticalOptions="CenterAndExpand" />
+                    <StackLayout
+                        x:Name="stars"
+                        Orientation="Horizontal"
+                        Spacing="0">
+                        <Image Style="{StaticResource starsImage}" />
+                        <Image Style="{StaticResource starsImage}" />
+                        <Image Style="{StaticResource starsImage}" />
+                        <Image Style="{StaticResource starsImage}" />
+                        <Image Style="{StaticResource starsImage}" />
+                        <Label
+                            Margin="10,1,0,0"
+                            Text="{Binding review_count, StringFormat='{0} reviews'}"
+                            TextColor="{AppThemeBinding Dark={StaticResource lightTextColor},
+                                                        Light={StaticResource darkTextColor}}" />
+                    </StackLayout>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding location.display_address[0]}" TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                <Span Text=", " TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                <Span Text="{Binding location.display_address[1]}" TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                <Span Text=", " TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                <Span Text="{Binding location.display_address[2]}" TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Style="{StaticResource frames}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Clicked="Website_Clicked"
+                        HorizontalOptions="StartAndExpand"
+                        Source="website.png"
+                        Style="{StaticResource linkImageButton}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Clicked="Website_Clicked"
+                        HorizontalOptions="StartAndExpand"
+                        Style="{StaticResource linkButton}"
+                        Text="Website" />
+                    <Label
+                        x:Name="urlLink"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="false"
+                        Text="{Binding url}"
+                        VerticalOptions="CenterAndExpand" />
+
+
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Source="direction.png"
+                        Clicked="Direction_Clicked"
+                        Style="{StaticResource linkImageButton}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Clicked="Direction_Clicked"
+                        Style="{StaticResource linkButton}"
+                        Text="Direction" />
+                    <Label
+                        x:Name="directionLat"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="false"
+                        Text="{Binding coordinates.latitude}"
+                        VerticalOptions="CenterAndExpand" />
+                    <Label
+                        x:Name="directionLong"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="false"
+                        Text="{Binding coordinates.longitude}"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Clicked="Phone_Clicked"
+                        HorizontalOptions="End"
+                        Source="phone.png"
+                        Style="{StaticResource linkImageButton}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Clicked="Phone_Clicked"
+                        HorizontalOptions="EndAndExpand"
+                        Style="{StaticResource linkButton}"
+                        Text="Call" />
+                    <Label
+                        x:Name="phoneLink"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="false"
+                        Text="{Binding phone}"
+                        VerticalOptions="CenterAndExpand" />
+                </Grid>
+            </Frame>
+
+            <Frame Style="{StaticResource frames}">
+                <maps:Map
+                    x:Name="MyMap"
+                    HeightRequest="100"
+                    IsShowingUser="True" />
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

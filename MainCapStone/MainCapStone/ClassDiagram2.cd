@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MainCapStone.Helpers.ImageSourceConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\ImageSourceConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MainCapStone.Models.Category" Collapsed="true">
+    <Position X="19" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAQAAAAAAAAAAAAAAAAIAAAAAAAAAAAAEAACA=</HashCode>
+      <FileName>Models\CategoryRoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Models.CategoryRoot" Collapsed="true">
+    <Position X="13.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CategoryRoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Models.FoodCategories" Collapsed="true">
+    <Position X="19" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\FoodCategories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Models.RestaurantRecommender" Collapsed="true">
+    <Position X="15.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\RestaurantRecommender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Models.SavedRestaurants" Collapsed="true">
+    <Position X="19" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIQAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SavedRestaurants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Business" Collapsed="true">
+    <Position X="15.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAgAAAAAAAAAAAAAgAAASAUAMACAgEAAAAgAAggA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Category" Collapsed="true">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Center" Collapsed="true">
+    <Position X="15.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Coordinates" Collapsed="true">
+    <Position X="17.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Location" Collapsed="true">
+    <Position X="17.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACgAAEAAAAAAAAACAAABAAABAAGAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Region" Collapsed="true">
+    <Position X="12" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Root" Collapsed="true">
+    <Position X="17.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAgA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Services.CategoriesDBService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQQAAIAAAAAAgQAAAAAgEAAAAACAAAAAAA=</HashCode>
+      <FileName>Services\CategoriesDBService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MainCapStone.Services.InternetRestaurantYelpService" Collapsed="true">
+    <Position X="15.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAgAAAAJAAAAAA=</HashCode>
+      <FileName>Services\InternetRestaurantYelpService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Services.SavedRestaurantsDBService" Collapsed="true">
+    <Position X="12" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAcAAAAAACAACAACAAAAAAE=</HashCode>
+      <FileName>Services\SavedRestaurantsDBService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.ViewModels.MainViewModel" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MRAAABECAEAAAAABAAAIAAACEAABgAAAIAACAhAABBg=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.ViewModels.SavedRestaurantViewModel" Collapsed="true">
+    <Position X="6.75" Y="2.75" Width="2.5" />
+    <InheritanceLine Type="MainCapStone.ViewModels.ViewModelBase" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="3.25" Y="3" />
+        <Point X="2.875" Y="3" />
+        <Point X="2.875" Y="2.625" />
+        <Point X="8" Y="2.625" />
+        <Point X="8" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAABABAACgAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\SavedRestaurantViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.ViewModels.SettingsViewModel" Collapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.75" />
+    <InheritanceLine Type="MainCapStone.ViewModels.ViewModelBase" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="3.25" Y="3.125" />
+        <Point X="2.906" Y="3.125" />
+        <Point X="2.906" Y="3.629" />
+        <Point X="10.375" Y="3.629" />
+        <Point X="10.375" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAABACABAAAAQAAAAEAQACg=</HashCode>
+      <FileName>ViewModels\SettingsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.ViewModels.ViewModelBase" Collapsed="true">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Views.MainPage" Collapsed="true">
+    <Position X="19" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Views.RestaurantDetailsPage" Collapsed="true">
+    <Position X="13.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAEAAgAAAAIAAAEAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Views\RestaurantDetailsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Views.SavedRestaurantsPage" Collapsed="true">
+    <Position X="13.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\SavedRestaurantsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Views.SettingsPage" Collapsed="true">
+    <Position X="15.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAgAAAABAAAAAABAAAAAAAAAAAAAAAAQIAA=</HashCode>
+      <FileName>Views\SettingsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.App" Collapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAgAEAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.AppShell" Collapsed="true">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppShell.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Services.InternetCategoriesService" Collapsed="true">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAJAAAAAA=</HashCode>
+      <FileName>Services\InternetCategoriesService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MainCapStone.Services.ICategoriesDBService" Collapsed="true">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAIAAAAAAgQAAAAAgEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ICategoriesDBService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

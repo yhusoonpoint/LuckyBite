@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MainCapStone.Views.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MainCapStone.Models"
+    xmlns:viewmodels="clr-namespace:MainCapStone.ViewModels"
+    x:DataType="viewmodels:SettingsViewModel"
+    BackgroundColor="{AppThemeBinding Dark={StaticResource darkBackgroundColor},
+                                      Light={StaticResource lightBackgroundColor}}"
+    Shell.NavBarHasShadow="False">
+    <ContentPage.BindingContext>
+        <viewmodels:SettingsViewModel />
+    </ContentPage.BindingContext>
+
+    <Shell.TitleView>
+        <Image Source="luckyBite_inLine.png"
+               VerticalOptions="StartAndExpand"
+               HorizontalOptions="StartAndExpand"/>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20,20">
+            <Frame Style="{StaticResource frames}">
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="FILTERS"
+                    TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+            </Frame>
+            <!--  Box with red background  -->
+            <Frame Style="{StaticResource frames}">
+                <StackLayout Orientation="Vertical">
+                    <Grid Style="{StaticResource grids}">
+
+                        <Label
+                            HorizontalOptions="Start"
+                            Text="Distance preference"
+                            TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}"
+                            VerticalOptions="Center" />
+
+                        <Label
+                            Grid.Column="1"
+                            HorizontalOptions="End"
+                            Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:F1} km'}"
+                            TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}"
+                            VerticalOptions="Center" />
+                    </Grid>
+                    <StackLayout Orientation="Horizontal">
+                        <Slider
+                            x:Name="slider"
+                            HorizontalOptions="FillAndExpand"
+                            Maximum="40"
+                            Minimum="1"
+                            ThumbColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}"
+                            VerticalOptions="CenterAndExpand"
+                            Value="{Binding RadiusValue}" />
+
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Style="{StaticResource frames}">
+                <Grid Style="{StaticResource grids}">
+
+                    <Label
+                        HorizontalOptions="Start"
+                        Text="Currently opened"
+                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}"
+                        VerticalOptions="Center" />
+
+                    <Switch
+                        Grid.Column="1"
+                        HorizontalOptions="End"
+                        IsToggled="{Binding OpenOptionValue}"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <Frame Style="{StaticResource frames}">
+                <Grid Style="{StaticResource grids}">
+
+                    <Label
+                        HorizontalOptions="Start"
+                        Text="Minimum Review"
+                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}"
+                        VerticalOptions="Center" />
+
+                    <StackLayout
+                        x:Name="stars"
+                        Grid.Column="1"
+                        HorizontalOptions="EndAndExpand"
+                        Orientation="Horizontal"
+                        Spacing="0">
+                        <ImageButton Clicked="ImageButton_Clicked" Style="{StaticResource starsButton}" />
+                        <ImageButton Clicked="ImageButton_Clicked" Style="{StaticResource starsButton}" />
+                        <ImageButton Clicked="ImageButton_Clicked" Style="{StaticResource starsButton}" />
+                        <ImageButton Clicked="ImageButton_Clicked" Style="{StaticResource starsButton}" />
+                        <ImageButton Clicked="ImageButton_Clicked" Style="{StaticResource starsButton}" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <!--  Box with pink background  -->
+            <Frame Style="{StaticResource frames}">
+                <StackLayout>
+                    <Label
+                        Text="Cuisine Type"
+                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}"
+                        VerticalOptions="CenterAndExpand" />
+                    <Picker
+                        ItemDisplayBinding="{Binding Name}"
+                        ItemsSource="{Binding FoodCategories}"
+                        SelectedIndex="{Binding CategoryIndex}"
+                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" 
+                        />
+                </StackLayout>
+            </Frame>
+            <Frame Style="{DynamicResource frames}">
+                <Grid Style="{StaticResource grids}">
+                    <Label
+                        Margin="0,-7"
+                        FontSize="Body"
+                        Text="Theme"
+                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}"
+                        />
+                    <RadioButton
+                        x:Name="RadioButtonSystem"
+                        CheckedChanged="RadioButton_CheckedChanged"
+                        Grid.Column="0"
+                        Content="Auto"
+                        Value="System"
+                        Style="{StaticResource radioButtons}"
+                        />
+                    <RadioButton
+                        x:Name="RadioButtonLight"
+                        Grid.Column="1"
+                        CheckedChanged="RadioButton_CheckedChanged"
+                        Content="Light"
+                        Value="Light"
+                        Style="{StaticResource radioButtons}"/>
+                    <RadioButton
+                        x:Name="RadioButtonDark"
+                        Grid.Column="2"
+                        CheckedChanged="RadioButton_CheckedChanged"
+                        Content="Dark"
+                        Value="Dark"
+                        Style="{StaticResource radioButtons}"/>
+                </Grid>
+            </Frame>
+
+            <Button
+                Margin="20,5"
+                Command="{Binding ViewCommand}"
+                CornerRadius="10"
+                Style="{StaticResource basicButton}"
+                Text="CLOSE" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

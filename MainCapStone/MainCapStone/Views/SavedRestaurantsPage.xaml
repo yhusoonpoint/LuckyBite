@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MainCapStone.Views.SavedRestaurantsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:MainCapStone.Models"
+    xmlns:mvvm="clr-namespace:MvvmHelpers;assembly=MvvmHelpers"
+    xmlns:viewmodels="clr-namespace:MainCapStone.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:Name="MySavedRestuarantsPage"
+    Title="Saved Restaurants"
+    x:DataType="viewmodels:SavedRestaurantViewModel"
+    BackgroundColor="{AppThemeBinding Dark={StaticResource darkBackgroundColor},
+                                      Light={StaticResource lightBackgroundColor}}"
+    Shell.TabBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:SavedRestaurantViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ItemSelectedEventArgsConverter x:Key="ItemSelectedEventArgsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ListView
+        BackgroundColor="Transparent"
+        CachingStrategy="RecycleElement"
+        HasUnevenRows="True"
+        IsPullToRefreshEnabled="True"
+        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+        ItemsSource="{Binding SavedRestaurants}"
+        RefreshCommand="{Binding RefreshCommand}"
+        RefreshControlColor="Red"
+        SelectionMode="None"
+        SeparatorVisibility="None">
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="model:SavedRestaurants">
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem
+                            Command="{Binding Source={x:Reference MySavedRestuarantsPage}, Path=BindingContext.RemoveCommand}"
+                            CommandParameter="{Binding .}"
+                            IsDestructive="True"
+                            Text="Delete" />
+                    </ViewCell.ContextActions>
+                    <Grid Padding="10">
+                        <Frame
+                            Background="{AppThemeBinding Dark={StaticResource darkContainerColor},
+                                                         Light={StaticResource lightContainerColor}}"
+                            CornerRadius="20"
+                            HasShadow="True">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding BusinessData.image_url}" WidthRequest="66" />
+                                <StackLayout VerticalOptions="Center">
+                                    <Label
+                                        FontSize="Large"
+                                        Text="{Binding BusinessData.name}"
+                                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor},
+                                                                    Light={StaticResource darkTextColor}}"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        Text="{Binding BusinessData.display_phone}"
+                                        TextColor="{AppThemeBinding Dark={StaticResource lightTextColor},
+                                                                    Light={StaticResource darkTextColor}}"
+                                        VerticalOptions="Center" />
+                                    <Label>
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding BusinessData.location.display_address[0]}" TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                                <Span Text=", " TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                                <Span Text="{Binding BusinessData.location.display_address[1]}" TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                                <Span Text=", " TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                                <Span Text="{Binding BusinessData.location.display_address[2]}" TextColor="{AppThemeBinding Dark={StaticResource lightTextColor}, Light={StaticResource darkTextColor}}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
+

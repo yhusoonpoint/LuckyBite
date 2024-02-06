@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MainCapStone.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:MainCapStone.ViewModels"
+    x:DataType="viewmodels:MainViewModel"
+    BackgroundColor="{AppThemeBinding Dark={StaticResource darkBackgroundColor},
+                                      Light={StaticResource lightBackgroundColor}}"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto" VerticalOptions="CenterAndExpand">
+            <Image Grid.Row="0" Source="luckyBite.png" HorizontalOptions="Center" Margin="0,20,0,0" WidthRequest="200"/>
+            <Button
+                Grid.Row="1"
+                Command="{Binding ViewCommandSaved}"
+                IsEnabled="{Binding IsNotBusy}"
+                Style="{StaticResource basicButton}"
+                Text="View saved restaurants"
+                VerticalOptions="CenterAndExpand" />
+            <Button
+                Grid.Row="2"
+                Command="{Binding GenerateNameCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Style="{StaticResource basicButton}"
+                Text="I HAVE OPTIONS IN MIND"
+                VerticalOptions="CenterAndExpand" />
+            <Button
+                Grid.Row="3"
+                Command="{Binding ViewCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Style="{StaticResource basicButton}"
+                Text="FIND RESTAURANT" />
+            <ActivityIndicator
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                VerticalOptions="Center"
+                Color="#a3a2a2" />
+            <Label
+                Grid.Row="4"
+                FontSize="Small"
+                HorizontalOptions="Center"
+                IsVisible="{Binding ErrorVisibility}"
+                Text="{Binding ErrorMessage}"
+                TextColor="DarkRed" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

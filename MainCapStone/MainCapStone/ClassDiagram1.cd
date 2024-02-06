@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="MainCapStone.Models.CategoriesRoot">
+    <Position X="19" Y="6.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAgAAgAAQAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Models\CategoriesRoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Models.FoodCategories">
+    <Position X="15.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\FoodCategories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Business">
+    <Position X="18" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAgAAAAAAAAAAAAAgAAASAUAMACAgEAAAAgAAggA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Category">
+    <Position X="11" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Center" Collapsed="true">
+    <Position X="3.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Coordinates" Collapsed="true">
+    <Position X="13.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Location">
+    <Position X="13.5" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACgAAEAAAAAAAAACAAABAAABAAGAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Region" Collapsed="true">
+    <Position X="1.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.yelpAPI.Root" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAgA=</HashCode>
+      <FileName>Models\Root.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Services.CategoriesDBService" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="3.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQQAAAAAAAAAgQAAAAAgEAAAAACAAAAAAA=</HashCode>
+      <FileName>Services\CategoriesDBService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MainCapStone.Services.InternetCategoriesService">
+    <Position X="16.75" Y="4.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAJAAAAAA=</HashCode>
+      <FileName>Services\InternetCategoriesService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Services.InternetRestaurantYelpService">
+    <Position X="1.75" Y="5.75" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAA=</HashCode>
+      <FileName>Services\InternetRestaurantYelpService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.ViewModels.MainViewModel">
+    <Position X="1.75" Y="2" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAIAAAAhAAABg=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.ViewModels.SettingsViewModel">
+    <Position X="6.25" Y="2" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABACAAAAAAQAAAAEAQACA=</HashCode>
+      <FileName>ViewModels\SettingsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.ViewModels.ViewModelBase">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Views.MainPage" Collapsed="true">
+    <Position X="9.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Views.RestaurantDetailsPage">
+    <Position X="15" Y="6.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAgAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\RestaurantDetailsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.Views.SettingsPage">
+    <Position X="11.5" Y="6.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Views\SettingsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.App" Collapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainCapStone.AppShell" Collapsed="true">
+    <Position X="8" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppShell.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MainCapStone.Services.ICategoriesDBService">
+    <Position X="7.5" Y="5.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAgQAAAAAgEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ICategoriesDBService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
